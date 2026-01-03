@@ -41,6 +41,9 @@ img {
 	top: 0px;
 	padding: 0 30px;
 }
+.navbar.top {
+	background: transparent;
+}
 .navlinks {
 	display: flex;
 	gap: 1.5rem;
@@ -93,6 +96,10 @@ img {
 .hero * {
 	z-index: 10;
 }
+.hero.blog {
+	background: url("../img/blog.jpg") no-repeat center center/cover;
+	height: 30vh;
+}
 /* Icons */
 .icons {
 	padding: 30px;
@@ -143,4 +150,63 @@ img {
 .callback-form .btn {
 	padding: 12px 0;
 	margin-top: 20px;
+}
+/* Post */
+.post {
+	padding: 50px 30px;
+}
+.post h2 {
+	font-size: 40px;
+	margin-bottom: 20px;
+	padding-bottom: 10px;
+	border-bottom: #ccc;
+}
+.post .meta {
+	margin-bottom: 30px;
+}
+.post img {
+	width: 300px;
+	border-radius: 50%;
+	display: block;
+	margin: 0 auto 30px;
+}
+.footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	height: 200px;
+}
+.footer a {
+	color: #fff;
+}
+.footer a:hover {
+	color: #28a745;
+}
+.footer .social > * {
+	margin-right: 30px;
+}
+/* Mobile */
+@media (max-width: 768px) {
+	.navbar {
+		flex-direction: column;
+		padding: 20px;
+		height: 120px;
+	}
+	.navbar a {
+		padding: 10px 10px;
+		margin: 0 3px;
+	}
+	.flex-items {
+		flex-direction: column;
+	}
+	.flex-columns .column,
+	.flex-grid .column {
+		flex: 100%;
+		max-width: 100%;
+	}
+	.team img {
+		width: 70%;
+	}
 }

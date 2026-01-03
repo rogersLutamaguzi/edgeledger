@@ -14,9 +14,9 @@
 		<link rel="stylesheet" href="./css/style.css" />
 		<title>Welcome To EdgeLedger</title>
 	</head>
-	<body>
+	<body id="home">
 		<header class="hero">
-			<div id="navbar" class="navbar">
+			<div id="navbar" class="navbar top">
 				<h1 class="logo">
 					<span class="text-primary"><i class="fas fa-book-open"></i>Edge</span
 					>Ledger
@@ -27,7 +27,7 @@
 						<li><a href="#about">About</a></li>
 						<li><a href="#cases">Cases</a></li>
 						<li><a href="#blog">Blog</a></li>
-						<li><a href="#content">Content</a></li>
+						<li><a href="#contact">Contact</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -136,7 +136,7 @@
 				<div class="row">
 					<div class="column">
 						<div class="column-1">
-							<img src="./img/blog.jpg" alt="" />
+							<img src="./img/blog/ blog.jpg" alt="" />
 						</div>
 					</div>
 					<div class="column">
@@ -149,7 +149,7 @@
 								quaerat officia cum dolorum minus aspernatur ut tenetur.
 								Deleniti nesciunt voluptates similique sequi laboriosam!
 							</p>
-							<a href="" class="btn btn-outline">
+							<a href="blog.html" class="btn btn-outline">
 								<i class="fas fa-chevron"></i>
 								Read Or Blog
 							</a>
@@ -186,7 +186,7 @@
 				</div>
 			</section>
 			<!-- Contact -->
-			<section class="contact flex-columns">
+			<section id="contact" class="contact flex-columns">
 				<div class="row">
 					<div class="column">
 						<div class="column-1">
@@ -231,5 +231,28 @@
 				</div>
 			</section>
 		</main>
+		<footer class="footer bg-dark">
+			<div class="social">
+				<a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+				<a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+				<a href="#"><i class="fab fa-youtube fa-2x"></i></a>
+				<a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+			</div>
+			<p>Copyright &copy; 2025 - EdgeLedger</p>
+		</footer>
+		<script>
+			let scrolled = false;
+			const navbar = document.getElementById("navbar");
+			window.onscroll = function () {
+				if (window.pageYOffset > 100) {
+					navbar.classList.remove("top");
+					if (!scrolled) {
+						navbar.style.transfrom = "translateY(-70px)";
+					}
+				} else {
+					navbar.classList.add("top");
+				}
+			};
+		</script>
 	</body>
 </html>
